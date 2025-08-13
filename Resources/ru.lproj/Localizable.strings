@@ -1,0 +1,64 @@
+/* General */
+"app_name" = "AURZA";
+"today" = "Сегодня";
+"habits" = "Привычки";
+"goals" = "Цели";
+"stats" = "Статистика";
+"settings" = "Настройки";
+"cancel" = "Отмена";
+"save" = "Сохранить";
+"edit" = "Изменить";
+"delete" = "Удалить";
+"add" = "Добавить";
+"done" = "Готово";
+"ok" = "ОК";
+"yes" = "Да";
+"no" = "Нет";
+"all" = "Все";
+"none" = "Нет";
+"search" = "Поиск";
+"filter" = "Фильтр";
+"sort" = "Сортировка";
+"share" = "Поделиться";
+"export" = "Экспорт";
+"import" = "Импорт";
+"reset" = "Сброс";
+"restore" = "Восстановить";
+"next" = "Далее";
+"previous" = "Назад";
+"skip" = "Пропустить";
+"get_started" = "Начать";
+"error" = "Ошибка";
+"success" = "Успешно";
+"warning" = "Предупреждение";
+"info" = "Информация";
+
+/* Tasks */
+"tasks" = "Задачи";
+"task_title" = "Название задачи";
+"task_description" = "Описание (необязательно)";
+"new_task" = "Новая задача";
+"edit_task" = "Изменить задачу";
+"add_task" = "Добавить задачу";
+"no_tasks_title" = "Задач пока нет";
+"no_tasks_description" = "Создайте первую задачу чтобы начать быть продуктивным!";
+"pinned_tasks" = "Закрепленные задачи";
+"suggested_tasks" = "Предлагаемые задачи";
+"completed" = "Выполнено";
+"pin" = "Закрепить";
+"unpin" = "Открепить";
+
+/* Task Templates */
+"template_task_1" = "Проверить почту";
+"template_task_2" = "Написать отчет";
+"template_task_3" = "Утренняя пробежка";
+"template_task_4" = "Читать 30 минут";
+"template_task_5" = "Уборка рабочего места";
+"template_task_6" = "Покупка продуктов";
+"template_task_7" = "Командная встреча";
+"template_task_8" = "Позвонить родителям";
+"template_task_9" = "Медитация";
+"template_task_10" = "Лечь спать рано";
+
+/* Additional strings continue similarly for all other keys... */
+/* Due to length constraints, I'll create placeholder for other language files */

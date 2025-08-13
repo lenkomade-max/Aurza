@@ -1,0 +1,391 @@
+/* General */
+"app_name" = "AURZA";
+"today" = "Today";
+"habits" = "Habits";
+"goals" = "Goals";
+"stats" = "Stats";
+"settings" = "Settings";
+"cancel" = "Cancel";
+"save" = "Save";
+"edit" = "Edit";
+"delete" = "Delete";
+"add" = "Add";
+"done" = "Done";
+"ok" = "OK";
+"yes" = "Yes";
+"no" = "No";
+"all" = "All";
+"none" = "None";
+"search" = "Search";
+"filter" = "Filter";
+"sort" = "Sort";
+"share" = "Share";
+"export" = "Export";
+"import" = "Import";
+"reset" = "Reset";
+"restore" = "Restore";
+"next" = "Next";
+"previous" = "Previous";
+"skip" = "Skip";
+"get_started" = "Get Started";
+"error" = "Error";
+"success" = "Success";
+"warning" = "Warning";
+"info" = "Info";
+
+/* Tasks */
+"tasks" = "Tasks";
+"task_title" = "Task Title";
+"task_description" = "Description (optional)";
+"new_task" = "New Task";
+"edit_task" = "Edit Task";
+"add_task" = "Add Task";
+"no_tasks_title" = "No Tasks Yet";
+"no_tasks_description" = "Create your first task to start being productive!";
+"pinned_tasks" = "Pinned Tasks";
+"suggested_tasks" = "Suggested Tasks";
+"completed" = "Completed";
+"pin" = "Pin";
+"unpin" = "Unpin";
+
+/* Task Templates */
+"template_task_1" = "Check emails";
+"template_task_2" = "Write report";
+"template_task_3" = "Morning run";
+"template_task_4" = "Read for 30 min";
+"template_task_5" = "Clean workspace";
+"template_task_6" = "Grocery shopping";
+"template_task_7" = "Team meeting";
+"template_task_8" = "Call parents";
+"template_task_9" = "Meditation";
+"template_task_10" = "Early sleep";
+
+/* Habits */
+"habit_title" = "Habit Title";
+"new_habit" = "New Habit";
+"edit_habit" = "Edit Habit";
+"add_habit" = "Add Habit";
+"your_habits" = "Your Habits";
+"no_habits_title" = "No Habits Yet";
+"no_habits_description" = "Build your first habit to create lasting change!";
+"suggested_habits" = "Suggested Habits";
+"more_habits" = "More Habits to Try";
+"schedule" = "Schedule";
+"default_duration" = "Default Duration";
+"minutes" = "minutes";
+"start" = "Start";
+"current_streak" = "Current Streak";
+"longest_streak" = "Longest Streak";
+"day_streak" = "Day Streak";
+
+/* Habit Templates */
+"template_habit_1" = "Morning meditation";
+"template_habit_2" = "Exercise";
+"template_habit_3" = "Read books";
+"template_habit_4" = "Drink water";
+"template_habit_5" = "Journal";
+"template_habit_6" = "Learn something new";
+"template_habit_7" = "Practice art";
+"template_habit_8" = "Brain training";
+"template_habit_9" = "Connect with friends";
+"template_habit_10" = "Play music";
+
+/* Goals */
+"goal_title" = "Goal Title";
+"goal_details" = "Details (optional)";
+"new_goal" = "New Goal";
+"edit_goal" = "Edit Goal";
+"add_goal" = "Add Goal";
+"no_goals_title" = "No Goals Yet";
+"no_goals_description" = "Set your first goal to achieve something amazing!";
+"suggested_goals" = "Suggested Goals";
+"category" = "Category";
+"deadline" = "Deadline";
+"measurable_goal" = "Measurable Goal";
+"target" = "Target";
+"current_progress" = "Current Progress";
+"add_progress" = "Add Progress";
+"amount" = "Amount";
+
+/* Goal Templates */
+"template_goal_1" = "Save $10,000";
+"template_goal_2" = "Lose 20 pounds";
+"template_goal_3" = "Read 12 books";
+"template_goal_4" = "Run 100km";
+"template_goal_5" = "Family dinner weekly";
+"template_goal_6" = "Learn 5 new skills";
+"template_goal_7" = "Emergency fund $1000";
+"template_goal_8" = "30 days meditation";
+"template_goal_9" = "Travel abroad";
+"template_goal_10" = "Get promotion";
+
+/* Goal Motivations */
+"goal_motivation_1" = "You're making great progress!";
+"goal_motivation_2" = "Keep pushing forward!";
+"goal_motivation_3" = "Every step counts!";
+"goal_motivation_4" = "You've got this!";
+"goal_motivation_5" = "Stay focused and consistent!";
+
+/* Categories */
+"category_health" = "Health";
+"category_money" = "Money";
+"category_family" = "Family";
+"category_growth" = "Growth";
+
+/* Periods */
+"period_week" = "Week";
+"period_month" = "Month";
+"period_90days" = "90 Days";
+"period_year" = "Year";
+"period_custom" = "Custom";
+
+/* Days */
+"sunday" = "Sunday";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+
+/* Repeat */
+"repeat" = "Repeat";
+"frequency" = "Frequency";
+"interval" = "Interval";
+"repeat_daily" = "Daily";
+"repeat_weekly" = "Weekly";
+"repeat_monthly" = "Monthly";
+"repeat_yearly" = "Yearly";
+
+/* Reminders */
+"reminders" = "Reminders";
+"add_reminder" = "Add Reminder";
+"new_reminder" = "New Reminder";
+"time" = "Time";
+"sound" = "Sound";
+"date" = "Date";
+
+/* Tags */
+"tags" = "Tags";
+"manage_tags" = "Manage Tags";
+"add_tag" = "Add Tag";
+"new_tag" = "New Tag";
+"edit_tag" = "Edit Tag";
+"tag_name" = "Tag Name";
+"tag_color" = "Tag Color";
+
+/* Default Tags */
+"tag_work" = "Work";
+"tag_personal" = "Personal";
+"tag_health" = "Health";
+"tag_learning" = "Learning";
+"tag_finance" = "Finance";
+
+/* Stats */
+"stats_pro_title" = "Unlock Advanced Analytics";
+"stats_pro_description" = "Get detailed insights into your productivity with AURZA PRO";
+"activity_heatmap" = "Activity Heatmap";
+"trend_graph" = "Trend Graph";
+"completions" = "completions";
+"less" = "Less";
+"more" = "More";
+"no_data" = "No data";
+"filters" = "Filters";
+"streaks_achievements" = "Streaks & Achievements";
+"xp_level" = "XP Level";
+"tag_analytics" = "Tag Analytics";
+"weekly_review" = "Weekly Review";
+
+/* XP Levels */
+"level_beginner" = "Beginner";
+"level_apprentice" = "Apprentice";
+"level_expert" = "Expert";
+"level_master" = "Master";
+"level_grandmaster" = "Grandmaster";
+"level_legend" = "Legend";
+
+/* Achievements */
+"achievement_streak" = "Streak Master";
+"achievement_streak_desc" = "Maintain a 7-day streak";
+"achievement_taskmaster" = "Task Master";
+"achievement_taskmaster_desc" = "Complete 100 tasks";
+"achievement_habitbuilder" = "Habit Builder";
+"achievement_habitbuilder_desc" = "Complete 30 habits";
+"achievement_goalgetter" = "Goal Getter";
+"achievement_goalgetter_desc" = "Achieve 10 goals";
+"achievement_earlybird" = "Early Bird";
+"achievement_earlybird_desc" = "Complete 20 morning tasks";
+"achievement_nightowl" = "Night Owl";
+"achievement_nightowl_desc" = "Complete 20 evening tasks";
+"achievement_consistent" = "Consistent";
+"achievement_consistent_desc" = "30 days of activity";
+"achievement_explorer" = "Explorer";
+"achievement_explorer_desc" = "Use 10 different tags";
+"achievement_focused" = "Focused";
+"achievement_focused_desc" = "Complete 50 single-tag items";
+"achievement_balanced" = "Balanced";
+"achievement_balanced_desc" = "Progress in all categories";
+
+/* Mini Hub */
+"mini_hub" = "Mini Hub";
+"minihub_pro_title" = "Unlock Diary & Notes";
+"minihub_pro_description" = "Keep a journal and organize your thoughts with AURZA PRO";
+"diary" = "Diary";
+"notes" = "Notes";
+"search_diary" = "Search diary entries";
+"search_notes" = "Search notes";
+"combine_diary_notes" = "Combine Diary & Notes";
+
+/* Diary */
+"no_entries_title" = "No Diary Entries";
+"no_entries_description" = "Start writing your thoughts and feelings";
+"write_entry" = "Write Entry";
+"new_entry" = "New Entry";
+"edit_entry" = "Edit Entry";
+"pin_entry" = "Pin Entry";
+"mood" = "Mood";
+"emoji" = "Emoji";
+"scale" = "Scale";
+"entry" = "Entry";
+"daily_question" = "Daily Question";
+"your_answer" = "Your answer...";
+"select_date" = "Select Date";
+
+/* Daily Questions */
+"daily_question_1" = "What are you grateful for today?";
+"daily_question_2" = "What made you smile today?";
+"daily_question_3" = "What challenge did you overcome?";
+"daily_question_4" = "What did you learn today?";
+"daily_question_5" = "How did you help someone today?";
+"daily_question_6" = "What's your biggest win today?";
+"daily_question_7" = "What inspired you today?";
+"daily_question_8" = "How are you feeling right now?";
+"daily_question_9" = "What's on your mind?";
+"daily_question_10" = "What are you looking forward to?";
+
+/* Notes */
+"no_notes_title" = "No Notes";
+"no_notes_description" = "Create your first note to capture ideas";
+"no_archived_notes_title" = "No Archived Notes";
+"no_archived_notes_description" = "Archived notes will appear here";
+"create_note" = "Create Note";
+"new_note" = "New Note";
+"edit_note" = "Edit Note";
+"note_title" = "Note Title";
+"pin_note" = "Pin Note";
+"archive" = "Archive";
+"unarchive" = "Unarchive";
+"checklist" = "Checklist";
+"checklist_items" = "Checklist Items";
+"new_item" = "New item";
+"content" = "Content";
+"organization" = "Organization";
+
+/* Attachments */
+"attachments" = "Attachments";
+"add_photos" = "Add Photos";
+"record_audio" = "Record Audio";
+"stop_recording" = "Stop Recording";
+
+/* Settings */
+"appearance" = "Appearance";
+"theme" = "Theme";
+"theme_light" = "Light";
+"theme_dark" = "Dark";
+"theme_system" = "System";
+"accent_color" = "Accent Color";
+"mood_theme" = "Mood Theme";
+"mood_fresh" = "Fresh";
+"mood_deep" = "Deep";
+"mood_mono" = "Mono";
+
+"language" = "Language";
+"app_language" = "App Language";
+
+"notifications_sounds" = "Notifications & Sounds";
+"notifications" = "Notifications";
+"sounds" = "Sounds";
+"haptics" = "Haptics";
+"question_time" = "Question Time";
+
+"subscription" = "Subscription";
+"manage_subscription" = "Manage Subscription";
+"unlock_pro" = "Unlock PRO";
+
+"productivity" = "Productivity";
+"show_productivity_pulse" = "Show Productivity Pulse";
+"app_lock" = "App Lock";
+
+"data" = "Data";
+"export_data" = "Export Data";
+"import_data" = "Import Data";
+"reset_all" = "Reset All";
+"reset_confirmation" = "Reset Confirmation";
+"reset_warning" = "This will delete all your data. This action cannot be undone.";
+
+"help" = "Help";
+"restart_onboarding" = "Restart Onboarding";
+
+/* PRO Features */
+"pro_active" = "PRO Active";
+"pro_active_description" = "You have full access to all features";
+"choose_plan" = "Choose Your Plan";
+"pro_features" = "PRO Features";
+"pro_feature_1" = "Unlimited Tasks, Habits & Goals";
+"pro_feature_2" = "Advanced Calendar & Repeats";
+"pro_feature_3" = "Advanced Reminders & Sounds";
+"pro_feature_4" = "Diary & Notes with Daily Questions";
+"pro_feature_5" = "Goal Categories (Health, Money, Family, Growth)";
+"pro_feature_6" = "Complete Statistics & Analytics";
+"pro_feature_7" = "Tag Analytics & Insights";
+"pro_feature_8" = "Themes & Accent Colors";
+"pro_feature_9" = "Data Export & Import";
+"pro_feature_10" = "All Future Premium Features";
+
+"best_value" = "BEST VALUE";
+"most_popular" = "MOST POPULAR";
+"per_month" = "per month";
+"one_time" = "one-time payment";
+"restore_purchases" = "Restore Purchases";
+"restore_no_purchases" = "No purchases found to restore";
+"purchase_error" = "Purchase failed. Please try again.";
+"terms_of_service" = "Terms of Service";
+"privacy_policy" = "Privacy Policy";
+
+/* Paywall */
+"paywall_subtitle" = "Unlock your full potential";
+
+/* Notifications */
+"notification_task_title" = "Task Reminder";
+"notification_habit_title" = "Habit Reminder";
+"notification_goal_title" = "Goal Reminder";
+"notification_daily_question_title" = "Daily Reflection";
+
+/* Motivational Phrases */
+"motivation_1" = "Amazing work! Keep it up! 🌟";
+"motivation_2" = "You're on fire today! 🔥";
+"motivation_3" = "Another one done! Great job! ✨";
+"motivation_4" = "You're unstoppable! 💪";
+"motivation_5" = "Excellent progress! 🎯";
+"motivation_6" = "Way to go, champion! 🏆";
+"motivation_7" = "You're crushing it! 🚀";
+"motivation_8" = "Fantastic effort! 👏";
+"motivation_9" = "Keep that momentum going! ⚡";
+"motivation_10" = "You're making it happen! 🌈";
+
+/* Onboarding */
+"onboarding_calendar_title" = "Track Your Week";
+"onboarding_calendar_description" = "Use the week strip to navigate between days and see your progress at a glance";
+"onboarding_add_title" = "Quick Add";
+"onboarding_add_description" = "Tap the + button to quickly add tasks, habits, or goals";
+"onboarding_minihub_title" = "Your Personal Space";
+"onboarding_minihub_description" = "Swipe from the right on Today to access your diary and notes";
+"onboarding_stats_title" = "Track Progress";
+"onboarding_stats_description" = "View detailed statistics, achievements, and insights about your productivity";
+
+/* Hints */
+"hint_week_strip" = "Tap any day to filter";
+"hint_categories" = "Filter by category";
+
+/* Empty States */
+"choose_emoji" = "Choose Emoji";
