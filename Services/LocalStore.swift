@@ -353,7 +353,7 @@ class LocalStore: ObservableObject {
     }
     
     // MARK: - Persistence
-    private func saveData() {
+    func saveData() {
         // Save to UserDefaults for simplicity (in production, use Core Data or Files)
                let encoder = JSONEncoder()
                

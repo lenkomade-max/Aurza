@@ -65,12 +65,15 @@ class ExportImportService: ObservableObject {
                 store.streak = importData.streak
                 store.settings = importData.settings
                 store.weeklySummaries = importData.weeklySummaries
-                
+
             case .merge:
                 // Merge logic - combine without duplicates
                 mergeData(from: importData, into: store)
             }
-            
+
+            // Persist imported changes regardless of merge policy
+            store.saveData()
+
             return true
         } catch {
             print("Import failed: \(error)")
