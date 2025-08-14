@@ -353,100 +353,55 @@ class LocalStore: ObservableObject {
     }
     
     // MARK: - Persistence
+    private func saveCodable<T: Codable>(_ value: T, key: String, encoder: JSONEncoder) {
+        if let encoded = try? encoder.encode(value) {
+            UserDefaults.standard.set(encoded, forKey: key)
+        }
+    }
+
+    private func loadCodable<T: Codable>(key: String, decoder: JSONDecoder, assign: (T) -> Void) {
+        if let data = UserDefaults.standard.data(forKey: key),
+           let decoded = try? decoder.decode(T.self, from: data) {
+            assign(decoded)
+        }
+    }
+
     private func saveData() {
         // Save to UserDefaults for simplicity (in production, use Core Data or Files)
-               let encoder = JSONEncoder()
-               
-               if let encoded = try? encoder.encode(tasks) {
-                   UserDefaults.standard.set(encoded, forKey: "tasks")
-               }
-               if let encoded = try? encoder.encode(habits) {
-                   UserDefaults.standard.set(encoded, forKey: "habits")
-               }
-               if let encoded = try? encoder.encode(goals) {
-                   UserDefaults.standard.set(encoded, forKey: "goals")
-               }
-               if let encoded = try? encoder.encode(tags) {
-                   UserDefaults.standard.set(encoded, forKey: "tags")
-               }
-               if let encoded = try? encoder.encode(completions) {
-                   UserDefaults.standard.set(encoded, forKey: "completions")
-               }
-               if let encoded = try? encoder.encode(journalEntries) {
-                   UserDefaults.standard.set(encoded, forKey: "journalEntries")
-               }
-               if let encoded = try? encoder.encode(notes) {
-                   UserDefaults.standard.set(encoded, forKey: "notes")
-               }
-               if let encoded = try? encoder.encode(achievements) {
-                   UserDefaults.standard.set(encoded, forKey: "achievements")
-               }
-               if let encoded = try? encoder.encode(xpLevel) {
-                   UserDefaults.standard.set(encoded, forKey: "xpLevel")
-               }
-               if let encoded = try? encoder.encode(streak) {
-                   UserDefaults.standard.set(encoded, forKey: "streak")
-               }
-               if let encoded = try? encoder.encode(settings) {
-                   UserDefaults.standard.set(encoded, forKey: "settings")
-               }
-               if let encoded = try? encoder.encode(weeklySummaries) {
-                   UserDefaults.standard.set(encoded, forKey: "weeklySummaries")
-               }
-           }
-           
-           private func loadData() {
-               let decoder = JSONDecoder()
-               
-               if let data = UserDefaults.standard.data(forKey: "tasks"),
-                  let decoded = try? decoder.decode([TaskItem].self, from: data) {
-                   tasks = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "habits"),
-                  let decoded = try? decoder.decode([Habit].self, from: data) {
-                   habits = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "goals"),
-                  let decoded = try? decoder.decode([Goal].self, from: data) {
-                   goals = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "tags"),
-                  let decoded = try? decoder.decode([Tag].self, from: data) {
-                   tags = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "completions"),
-                  let decoded = try? decoder.decode([Completion].self, from: data) {
-                   completions = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "journalEntries"),
-                  let decoded = try? decoder.decode([JournalEntry].self, from: data) {
-                   journalEntries = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "notes"),
-                  let decoded = try? decoder.decode([Note].self, from: data) {
-                   notes = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "achievements"),
-                  let decoded = try? decoder.decode([Achievement].self, from: data) {
-                   achievements = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "xpLevel"),
-                  let decoded = try? decoder.decode(XPLevel.self, from: data) {
-                   xpLevel = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "streak"),
-                  let decoded = try? decoder.decode(Streak.self, from: data) {
-                   streak = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "settings"),
-                  let decoded = try? decoder.decode(AppSettings.self, from: data) {
-                   settings = decoded
-               }
-               if let data = UserDefaults.standard.data(forKey: "weeklySummaries"),
-                  let decoded = try? decoder.decode([WeeklySummary].self, from: data) {
-                   weeklySummaries = decoded
-               }
-           }
+        let encoder = JSONEncoder()
+        [
+            { self.saveCodable(self.tasks, key: "tasks", encoder: encoder) },
+            { self.saveCodable(self.habits, key: "habits", encoder: encoder) },
+            { self.saveCodable(self.goals, key: "goals", encoder: encoder) },
+            { self.saveCodable(self.tags, key: "tags", encoder: encoder) },
+            { self.saveCodable(self.completions, key: "completions", encoder: encoder) },
+            { self.saveCodable(self.journalEntries, key: "journalEntries", encoder: encoder) },
+            { self.saveCodable(self.notes, key: "notes", encoder: encoder) },
+            { self.saveCodable(self.achievements, key: "achievements", encoder: encoder) },
+            { self.saveCodable(self.xpLevel, key: "xpLevel", encoder: encoder) },
+            { self.saveCodable(self.streak, key: "streak", encoder: encoder) },
+            { self.saveCodable(self.settings, key: "settings", encoder: encoder) },
+            { self.saveCodable(self.weeklySummaries, key: "weeklySummaries", encoder: encoder) }
+        ].forEach { $0() }
+    }
+
+    private func loadData() {
+        let decoder = JSONDecoder()
+        [
+            { self.loadCodable(key: "tasks", decoder: decoder) { self.tasks = $0 } },
+            { self.loadCodable(key: "habits", decoder: decoder) { self.habits = $0 } },
+            { self.loadCodable(key: "goals", decoder: decoder) { self.goals = $0 } },
+            { self.loadCodable(key: "tags", decoder: decoder) { self.tags = $0 } },
+            { self.loadCodable(key: "completions", decoder: decoder) { self.completions = $0 } },
+            { self.loadCodable(key: "journalEntries", decoder: decoder) { self.journalEntries = $0 } },
+            { self.loadCodable(key: "notes", decoder: decoder) { self.notes = $0 } },
+            { self.loadCodable(key: "achievements", decoder: decoder) { self.achievements = $0 } },
+            { self.loadCodable(key: "xpLevel", decoder: decoder) { self.xpLevel = $0 } },
+            { self.loadCodable(key: "streak", decoder: decoder) { self.streak = $0 } },
+            { self.loadCodable(key: "settings", decoder: decoder) { self.settings = $0 } },
+            { self.loadCodable(key: "weeklySummaries", decoder: decoder) { self.weeklySummaries = $0 } }
+        ].forEach { $0() }
+    }
            
            private func checkStreakStatus() {
                streak.checkStreakStatus()
