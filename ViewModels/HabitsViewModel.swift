@@ -83,6 +83,7 @@ class HabitsViewModel: ObservableObject {
     func createHabitFromTemplate(_ template: Habit) {
         var newHabit = template
         newHabit.id = UUID()
+        newHabit.completedDates = []
         newHabit.createdAt = Date()
         newHabit.updatedAt = Date()
         addHabit(newHabit)

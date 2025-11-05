@@ -73,8 +73,6 @@ struct Habit: Identifiable, Codable, Equatable {
             if calendar.isDate(date, inSameDayAs: checkDate) {
                 streak += 1
                 checkDate = calendar.date(byAdding: .day, value: -1, to: checkDate) ?? checkDate
-            } else if calendar.isDate(date, inSameDayAs: checkDate) {
-                continue
             } else {
                 break
             }

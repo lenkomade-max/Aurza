@@ -50,14 +50,15 @@ class LocalStore: ObservableObject {
     func completeTask(_ task: TaskItem) {
         var updatedTask = task
         updatedTask.isCompleted = true
+        updatedTask.updatedAt = Date()
         updateTask(updatedTask)
-        
+
         let completion = Completion(
             type: .task,
             itemId: task.id,
             itemTitle: task.title,
             tagNames: task.tags.map { $0.name },
-            xpEarned: task.isPinned ? 5 : 10
+            xpEarned: task.isPinned ? 15 : 10
         )
         addCompletion(completion)
     }
@@ -180,13 +181,13 @@ class LocalStore: ObservableObject {
     func getCompletionRate(for period: Period, type: Completion.CompletionType? = nil) -> Double {
         let periodCompletions = getCompletionsForPeriod(period)
         let filtered = type != nil ? periodCompletions.filter { $0.type == type } : periodCompletions
-        
+
         guard !filtered.isEmpty else { return 0 }
-        
+
         let calendar = Calendar.current
         let (start, end) = period.dateRange()
-        let days = calendar.dateComponents([.day], from: start, to: end).day ?? 1
-        
+        let days = abs(calendar.dateComponents([.day], from: start, to: end).day ?? 0) + 1
+
         return Double(filtered.count) / Double(max(1, days))
     }
     

@@ -69,13 +69,17 @@ class NotificationService: ObservableObject {
         } else {
             content.sound = .default
         }
-        
+
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        
+
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Failed to schedule notification: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func scheduleWeeklyNotification(content: UNMutableNotificationContent, weekday: Int, time: Date, identifier: String, sound: String?) {
@@ -84,14 +88,18 @@ class NotificationService: ObservableObject {
         } else {
             content.sound = .default
         }
-        
+
         let calendar = Calendar.current
         var components = calendar.dateComponents([.hour, .minute], from: time)
         components.weekday = weekday
-        
+
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Failed to schedule weekly notification: \(error.localizedDescription)")
+            }
+        }
     }
     
     func removeNotifications(for itemId: UUID) {

@@ -28,9 +28,10 @@ struct XPLevel: Codable {
     mutating func addXP(_ amount: Int) {
         totalXP += amount
         currentXP += amount
-        
+
         while currentXP >= xpForNextLevel {
-            currentXP -= xpForNextLevel
+            let xpNeeded = xpForNextLevel
+            currentXP -= xpNeeded
             level += 1
         }
     }

@@ -94,6 +94,7 @@ class TodayViewModel: ObservableObject {
         var newTask = template
         newTask.id = UUID()
         newTask.date = selectedDate
+        newTask.isCompleted = false
         newTask.createdAt = Date()
         newTask.updatedAt = Date()
         addTask(newTask)
