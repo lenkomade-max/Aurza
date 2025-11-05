@@ -138,7 +138,7 @@ struct HabitFormView: View {
             if let habit = habit {
                 title = habit.title
                 emoji = habit.emoji
-                color = Color(habit.color)
+                color = Color(rgbaColor: habit.color)
                 schedule = Set(habit.schedule)
                 defaultDuration = habit.defaultDuration
                 reminders = habit.reminders

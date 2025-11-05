@@ -97,7 +97,7 @@ struct GoalCardView: View {
                                 .frame(height: 8)
                             
                             RoundedRectangle(cornerRadius: 4)
-                                .fill(Color(goal.color))
+                                .fill(Color(rgbaColor: goal.color))
                                 .frame(width: geometry.size.width * goal.progress, height: 8)
                         }
                     }
@@ -134,7 +134,7 @@ struct GoalCardView: View {
                     }) {
                         Image(systemName: "plus.circle.fill")
                             .font(.title3)
-                            .foregroundColor(Color(goal.color))
+                            .foregroundColor(Color(rgbaColor: goal.color))
                     }
                 }
             }
