@@ -15,9 +15,9 @@ struct TagsManagementView: View {
             ForEach(localStore.tags) { tag in
                 HStack {
                     Circle()
-                        .fill(Color(tag.color))
+                        .fill(Color(rgbaColor: tag.color))
                         .frame(width: 24, height: 24)
-                    
+
                     Text(tag.name)
                     
                     Spacer()
@@ -97,7 +97,7 @@ struct TagFormView: View {
         .onAppear {
             if let tag = tag {
                 name = tag.name
-                color = Color(tag.color)
+                color = Color(rgbaColor: tag.color)
             }
         }
     }

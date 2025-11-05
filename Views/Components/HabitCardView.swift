@@ -57,7 +57,7 @@ struct HabitCardView: View {
                 HStack(spacing: 2) {
                     ForEach(1...7, id: \.self) { day in
                         Circle()
-                            .fill(habit.schedule.contains(day) ? Color(habit.color) : Color.gray.opacity(0.2))
+                            .fill(habit.schedule.contains(day) ? Color(rgbaColor: habit.color) : Color.gray.opacity(0.2))
                             .frame(width: 6, height: 6)
                     }
                 }
@@ -98,7 +98,7 @@ struct HabitCardView: View {
                     }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 6)
-                    .background(isCompletedToday ? Color.green : Color(habit.color))
+                    .background(isCompletedToday ? Color.green : Color(rgbaColor: habit.color))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                 }
@@ -163,7 +163,7 @@ struct HabitTimerView: View {
                     }) {
                         Image(systemName: isPaused ? "play.circle.fill" : "pause.circle.fill")
                             .font(.system(size: 60))
-                            .foregroundColor(Color(habit.color))
+                            .foregroundColor(Color(rgbaColor: habit.color))
                     }
                     
                     Button(action: {

@@ -37,7 +37,7 @@ enum Period: String, CaseIterable {
             return (startOfMonth, endOfMonth)
             
         case .quarter:
-            let start = calendar.date(byAdding: .day, value: -90, to: date) ?? date
+            let start = calendar.date(byAdding: .month, value: -3, to: date) ?? date
             return (start, date)
             
         case .year:

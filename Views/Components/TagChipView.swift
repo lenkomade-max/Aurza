@@ -34,15 +34,15 @@ struct TagChipView: View {
     var body: some View {
         Text(tag.name)
             .font(size.fontSize)
-            .foregroundColor(isSelected ? .white : Color(tag.color))
+            .foregroundColor(isSelected ? .white : Color(rgbaColor: tag.color))
             .padding(size.padding)
             .background(
                 RoundedRectangle(cornerRadius: 6)
-                    .fill(isSelected ? Color(tag.color) : Color(tag.color).opacity(0.15))
+                    .fill(isSelected ? Color(rgbaColor: tag.color) : Color(rgbaColor: tag.color).opacity(0.15))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(Color(tag.color), lineWidth: isSelected ? 0 : 1)
+                    .strokeBorder(Color(rgbaColor: tag.color), lineWidth: isSelected ? 0 : 1)
             )
             .onTapGesture {
                 onTap?()

@@ -137,7 +137,7 @@ struct GoalFormView: View {
                 details = goal.details ?? ""
                 category = goal.category
                 emoji = goal.emoji
-                color = Color(goal.color)
+                color = Color(rgbaColor: goal.color)
                 deadline = goal.deadline
                 hasTarget = goal.target != nil
                 if let t = goal.target {

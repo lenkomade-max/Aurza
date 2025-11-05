@@ -112,7 +112,7 @@ struct TaskFormView: View {
                 title = task.title
                 description = task.description ?? ""
                 emoji = task.emoji
-                color = Color(task.color)
+                color = Color(rgbaColor: task.color)
                 date = task.date
                 hasRepeat = task.repeatRule != nil
                 if let rule = task.repeatRule {
@@ -136,11 +136,11 @@ struct TaskFormView: View {
             reminders: reminders,
             tags: Array(selectedTags),
             isPinned: task?.isPinned ?? false,
-            isCompleted: false,
+            isCompleted: task?.isCompleted ?? false,
             createdAt: task?.createdAt ?? Date(),
             updatedAt: Date()
         )
-        
+
         onSave(newTask)
         dismiss()
     }

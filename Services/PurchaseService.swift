@@ -94,7 +94,8 @@ class PurchaseService: ObservableObject {
     }
     
     private func listenForTransactions() -> Task<Void, Error> {
-        return Task.detached {
+        return Task.detached { [weak self] in
+            guard let self = self else { return }
             for await result in Transaction.updates {
                 do {
                     let transaction = try await self.checkVerified(result)

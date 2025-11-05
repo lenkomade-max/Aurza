@@ -28,10 +28,10 @@ struct TaskCardView: View {
                 }
             }) {
                 Circle()
-                    .strokeBorder(Color(task.color), lineWidth: 2)
+                    .strokeBorder(Color(rgbaColor: task.color), lineWidth: 2)
                     .background(
                         Circle()
-                            .fill(isCompleted ? Color(task.color) : Color.clear)
+                            .fill(isCompleted ? Color(rgbaColor: task.color) : Color.clear)
                     )
                     .overlay(
                         Image(systemName: "checkmark")

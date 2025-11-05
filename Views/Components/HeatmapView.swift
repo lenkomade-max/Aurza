@@ -84,7 +84,7 @@ struct HeatmapView: View {
                     HStack(spacing: 2) {
                         // Month labels
                         VStack(alignment: .trailing, spacing: 2) {
-                            ForEach(0..<min(weeks.count, 12), id: \.self) { weekIndex in
+                            ForEach(weeks.indices, id: \.self) { weekIndex in
                                 if weekIndex % 4 == 0 {
                                     if let firstDate = weeks[weekIndex].compactMap({ $0 }).first {
                                         Text(monthLabel(for: firstDate))
