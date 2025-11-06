@@ -8,6 +8,19 @@
 import SwiftUI
 import StoreKit
 
+final class PaywallTimerHolder: ObservableObject {
+    var timer: Timer?
+
+    func invalidate() {
+        timer?.invalidate()
+        timer = nil
+    }
+
+    deinit {
+        invalidate()
+    }
+}
+
 @main
 struct AURZAApp: App {
     @StateObject private var localStore = LocalStore()
@@ -20,7 +33,7 @@ struct AURZAApp: App {
     @StateObject private var appTheme = AppTheme()
     
     @State private var showPaywall = false
-    @State private var paywallTimer: Timer?
+    @StateObject private var paywallTimerHolder = PaywallTimerHolder()
     
     init() {
         configureAppearance()
@@ -47,6 +60,11 @@ struct AURZAApp: App {
                 .onAppear {
                     setupApp()
                 }
+                .onChange(of: showPaywall) { isPresented in
+                    if isPresented {
+                        paywallTimerHolder.invalidate()
+                    }
+                }
                 .task {
                     await observeTransactions()
                 }
@@ -63,7 +81,8 @@ struct AURZAApp: App {
         
         if !onboardingService.hasShownInitialPaywall && !purchaseService.isPro {
             let delay = Double.random(in: 120...180)
-            paywallTimer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in
+            paywallTimerHolder.invalidate()
+            paywallTimerHolder.timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in
                 if !purchaseService.isPro {
                     showPaywall = true
                     onboardingService.hasShownInitialPaywall = true
