@@ -7,6 +7,7 @@ import Foundation
 import SwiftUI
 import PhotosUI
 
+@MainActor
 class MiniHubViewModel: ObservableObject {
     @Published var selectedTab = 0 // 0: Diary, 1: Notes
     @Published var searchText = ""

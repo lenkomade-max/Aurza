@@ -7,6 +7,7 @@ import Foundation
 import SwiftUI
 import LocalAuthentication
 
+@MainActor
 class SettingsViewModel: ObservableObject {
     @Published var settings: AppSettings
     @Published var showingExportSheet = false

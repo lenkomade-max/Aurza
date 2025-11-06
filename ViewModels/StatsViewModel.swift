@@ -6,6 +6,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class StatsViewModel: ObservableObject {
     @Published var selectedPeriod: Period = .week
     @Published var customStartDate = Date()
